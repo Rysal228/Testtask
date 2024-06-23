@@ -1,0 +1,23 @@
+button {
+    
+  margin: 8px;
+  background-color: blue;
+}
+
+.demo-table {
+    width: 100%;
+  }
+  
+  .demo-button-container {
+    padding: 16px;
+  }
+  
+  .no-underline {
+    text-decoration: none;
+    color: black;
+  }
+
+  .input {
+    margin-right: 5px;
+  }
+  

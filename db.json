@@ -1,0 +1,18 @@
+{
+  "PeriodicElement": [
+    {
+      "id": "620",
+      "name": "Груши",
+      "amount": 3,
+      "UnitCost": "59 RUB",
+      "description": "Очень вкусные"
+    },
+    {
+      "name": "Яблоки",
+      "amount": 2,
+      "UnitCost": "90 RUB",
+      "description": "Очень вкусные и спелые",
+      "id": "426"
+    }
+  ]
+}

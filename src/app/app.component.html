@@ -1,0 +1,45 @@
+<div class="demo-button-container">
+  
+  <div class="demo-button-container">
+    <form>
+      <input type="text" class="input" placeholder="Name" #nameInput />
+      <input type="number" class="input" placeholder="Amount" #amountInput />
+      <input type="number" class="input" placeholder="Unit Cost" #unitCostInput />
+      <input type="text" class="input" placeholder="Description" #descriptionInput />
+      <button mat-raised-button type="button" (click)="addData(nameInput.value, amountInput.valueAsNumber, unitCostInput.value, descriptionInput.value)" class="demo-button">
+        Add data
+      </button>
+    </form>
+    <form>
+      <input placeholder="ID to remove" #idInput />
+      <button mat-raised-button type="button" (click)="removeData(idInput.value)" class="demo-button">
+        Remove data
+      </button>
+    </form>
+  </div>
+
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 demo-table">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <td mat-cell *matCellDef="let element"><a [routerLink]="['/details', element.id]" class="no-underline">{{element.id}}</a></td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element"><a [routerLink]="['/details', element.id]" class="no-underline">{{element.name}}</a></td>
+  </ng-container>
+
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef>Amount</th>
+    <td mat-cell *matCellDef="let element"><a [routerLink]="['/details', element.id]" class="no-underline">{{element.amount}}</a></td>
+  </ng-container>
+
+  <ng-container matColumnDef="UnitCost">
+    <th mat-header-cell *matHeaderCellDef>Unit Cost</th>
+    <td mat-cell *matCellDef="let element"><a [routerLink]="['/details', element.id]" class="no-underline">{{element.UnitCost}}</a></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsToDisplayWithExpand;"></tr>
+</table>
